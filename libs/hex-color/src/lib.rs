@@ -12,8 +12,7 @@ pub struct Color {
     pub blue: u8,
 }
 
-#[derive(Debug, PartialEq)]
-pub struct ColorHex {
+#[derive(Debug, PartialEq)] pub struct ColorHex {
     pub red: String,
     pub green: String,
     pub blue: String,
@@ -70,7 +69,7 @@ mod test {
     }
 
     #[test]
-    fn parse_color_u16() {
+    fn parse_color_hex_strings() {
         assert_eq!(hex_number("#2F14DF"), Ok(("", ColorHex{
             red: String::from("2F"),
             green: String::from("14"),
